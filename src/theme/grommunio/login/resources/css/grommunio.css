@@ -1178,3 +1178,392 @@ html.login-pf body {
     padding-top: 56px;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Legacy engines (html.gl-legacy, see grommunio.js), e.g. the Outlook sign-in
+   window: no :is/:where/:has/:focus-within, logical properties or flex gap
+   --------------------------------------------------------------------------- */
+html.gl-legacy {
+  /* PatternFly globals (defined in a dropped :where rule) */
+  --pf-v5-global--spacer--xs: 0.25rem;
+  --pf-v5-global--spacer--sm: 0.5rem;
+  --pf-v5-global--spacer--md: 1rem;
+  --pf-v5-global--spacer--lg: 1.5rem;
+  --pf-v5-global--spacer--xl: 2rem;
+  --pf-v5-global--spacer--form-element: 0.375rem;
+  --pf-v5-global--FontSize--xs: 0.75rem;
+  --pf-v5-global--FontSize--sm: 0.875rem;
+  --pf-v5-global--FontSize--md: 1rem;
+  --pf-v5-global--FontSize--lg: 1.125rem;
+  --pf-v5-global--FontWeight--normal: 400;
+  --pf-v5-global--FontWeight--bold: 700;
+  --pf-v5-global--LineHeight--sm: 1.3;
+  --pf-v5-global--LineHeight--md: 1.5;
+  --pf-v5-global--BorderWidth--sm: 1px;
+  --pf-v5-global--BorderWidth--md: 2px;
+}
+
+html.gl-legacy button,
+html.gl-legacy input,
+html.gl-legacy optgroup,
+html.gl-legacy select,
+html.gl-legacy textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.5;
+  color: inherit;
+}
+
+html.gl-legacy .pf-v5-c-login__container::before,
+html.gl-legacy .pf-v5-c-login__container::after {
+  right: 16px;
+  left: auto;
+}
+
+html.gl-legacy[dir="rtl"] .pf-v5-c-login__container::before,
+html.gl-legacy[dir="rtl"] .pf-v5-c-login__container::after {
+  right: auto;
+  left: 16px;
+}
+
+html.gl-legacy.gl-utils .pf-v5-c-login__container {
+  padding-top: 60px;
+}
+
+html.gl-legacy #kc-page-title::before {
+  margin-right: 6px;
+}
+
+html.gl-legacy[dir="rtl"] #kc-page-title::before {
+  margin-right: 0;
+  margin-left: 6px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-login__main-header .pf-v5-c-login__main-header-utilities {
+  left: 16px;
+}
+
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-login__main-header .pf-v5-c-login__main-header-utilities {
+  left: auto;
+  right: 16px;
+}
+
+/* forms */
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form {
+  grid-gap: 12px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form__group-label {
+  padding-bottom: 6px !important;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form__group.pf-m-action {
+  margin-top: 0;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form__actions {
+  padding-top: 0 !important;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form__label-required {
+  margin-left: 4px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control {
+  align-items: center;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control > input,
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control > select,
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control > textarea {
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  align-self: stretch;
+  margin: 0;
+  padding: 0 16px;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: calc(var(--gl-radius-sm) - 1px);
+  box-shadow: none;
+  outline: 0;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-login__main-header-utilities .pf-v5-c-form-control > select {
+  min-height: 30px;
+  padding: 0 28px 0 10px;
+  font-weight: 500;
+  color: var(--gl-muted);
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control > textarea {
+  min-height: 88px;
+  padding: 10px 16px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control.pf-m-error > input {
+  padding-right: 40px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control > input::-ms-input-placeholder {
+  color: var(--gl-muted);
+  opacity: 1;
+}
+
+html.gl-legacy .pf-v5-c-login input::-ms-clear {
+  display: none;
+}
+
+html.gl-legacy .pf-v5-c-login input::-ms-reveal {
+  display: none;
+}
+
+html.gl-legacy .pf-v5-c-login select::-ms-expand {
+  display: none;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control__utilities,
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control__toggle-icon {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control__utilities > * + * {
+  margin-left: 8px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control.gl-focus,
+html.gl-legacy .pf-v5-c-login .pf-v5-c-input-group.gl-focus {
+  --gl-af-bg: var(--gl-surface);
+  background: var(--gl-surface);
+  border-color: var(--gl-primary);
+  box-shadow: var(--gl-ring);
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control.pf-m-error.gl-focus,
+html.gl-legacy .pf-v5-c-login .pf-v5-c-input-group.gl-error.gl-focus {
+  border-color: var(--gl-error);
+  box-shadow: var(--gl-ring-error);
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-input-group.gl-error {
+  border-color: var(--gl-error-border);
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-input-group__item.pf-m-fill {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-input-group > * + * {
+  border-left: 0;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-input-group .pf-v5-c-form-control,
+html.gl-legacy .pf-v5-c-login .pf-v5-c-input-group .pf-v5-c-form-control:hover,
+html.gl-legacy .pf-v5-c-login .pf-v5-c-input-group .pf-v5-c-form-control.gl-focus {
+  --gl-af-bg: inherit;
+  min-height: 42px;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-button.pf-m-control {
+  border-radius: 0 calc(var(--gl-radius-sm) - 1px) calc(var(--gl-radius-sm) - 1px) 0;
+}
+
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-button.pf-m-control {
+  border-radius: calc(var(--gl-radius-sm) - 1px) 0 0 calc(var(--gl-radius-sm) - 1px);
+}
+
+/* checkbox */
+html.gl-legacy .pf-v5-c-login .pf-v5-c-check {
+  grid-gap: 4px 8px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-check__label {
+  font-weight: 400;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-check__input::-ms-check {
+  color: var(--gl-on-primary);
+  background: var(--gl-surface);
+  border: 1px solid var(--gl-muted);
+  border-radius: 3px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-check__input:checked::-ms-check {
+  background: var(--gl-primary);
+  border-color: var(--gl-primary);
+}
+
+/* helper text, links */
+html.gl-legacy .pf-v5-c-login .pf-v5-c-form__helper-text {
+  margin-top: 6px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-helper-text {
+  grid-gap: 4px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-helper-text__item-icon {
+  margin-right: 4px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-helper-text.pf-v5-u-justify-content-space-between > * + * {
+  margin-left: 8px;
+}
+
+/* buttons */
+html.gl-legacy .pf-v5-c-login .pf-v5-c-button::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-button.pf-m-primary:focus {
+  box-shadow: 0 0 0 2px var(--gl-surface), 0 0 0 4px var(--gl-primary);
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-button.pf-m-secondary:focus,
+html.gl-legacy .pf-v5-c-login .pf-v5-c-button.pf-m-link:focus {
+  outline: 0;
+  box-shadow: var(--gl-ring);
+}
+
+html.gl-legacy .pf-v5-c-login a:focus,
+html.gl-legacy .pf-v5-c-login .pf-v5-c-check__input:focus {
+  outline: 2px solid var(--gl-primary);
+  outline-offset: 2px;
+}
+
+/* alerts */
+html.gl-legacy .pf-v5-c-login .pf-v5-c-alert {
+  margin-bottom: 12px !important;
+  border-left-width: 4px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-alert__icon {
+  margin-right: 8px;
+}
+
+/* footer bands */
+html.gl-legacy .pf-v5-c-login .pf-v5-c-login__main-footer-band {
+  margin-top: 16px;
+  border-top: 1px solid var(--gl-line);
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-login__main-footer-band > * + * {
+  padding-top: 8px;
+}
+
+html.gl-legacy #kc-social-providers ul {
+  grid-gap: 8px;
+}
+
+/* choice lists, tiles */
+html.gl-legacy .pf-v5-c-login .pf-v5-c-data-list {
+  grid-gap: 8px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-data-list__item.gl-focus {
+  border-color: var(--gl-primary);
+  box-shadow: var(--gl-ring);
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-data-list__cell.pf-m-icon {
+  margin-right: 12px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-tile__header.pf-m-stacked .pf-v5-c-tile__icon {
+  margin-right: 8px;
+}
+
+/* text pages */
+html.gl-legacy .pf-v5-c-login .pf-v5-c-login__main-body ul,
+html.gl-legacy .pf-v5-c-login .pf-v5-c-login__main-body ol {
+  padding-left: 20px;
+}
+
+html.gl-legacy .pf-v5-c-login .pf-v5-c-login__main-body ul.pf-v5-c-data-list,
+html.gl-legacy #kc-social-providers ul {
+  padding-left: 0;
+}
+
+/* right-to-left */
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-form-control.pf-m-error > input {
+  padding-right: 16px;
+  padding-left: 40px;
+}
+
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-alert {
+  border-left-width: 1px;
+  border-right-width: 4px;
+}
+
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-alert__icon,
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-helper-text__item-icon,
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-data-list__cell.pf-m-icon,
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-tile__header.pf-m-stacked .pf-v5-c-tile__icon {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-form__label-required,
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-form-control__utilities > * + *,
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-helper-text.pf-v5-u-justify-content-space-between > * + * {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-login__main-body ul,
+html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-login__main-body ol {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+@media (max-width: 480px) {
+  html.gl-legacy[dir="rtl"] .pf-v5-c-login .pf-v5-c-login__main-header .pf-v5-c-login__main-header-utilities {
+    right: 12px;
+  }
+
+  html.gl-legacy .pf-v5-c-login__container::before,
+  html.gl-legacy .pf-v5-c-login__container::after {
+    right: 12px;
+  }
+
+  html.gl-legacy[dir="rtl"] .pf-v5-c-login__container::before,
+  html.gl-legacy[dir="rtl"] .pf-v5-c-login__container::after {
+    right: auto;
+    left: 12px;
+  }
+
+  html.gl-legacy.gl-utils .pf-v5-c-login__container {
+    padding-top: 52px;
+  }
+
+  html.gl-legacy .pf-v5-c-login .pf-v5-c-login__main-header .pf-v5-c-login__main-header-utilities {
+    left: 12px;
+  }
+
+  html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control > input,
+  html.gl-legacy .pf-v5-c-login .pf-v5-c-form-control > textarea {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  html.gl-legacy .pf-v5-c-login__container,
+  html.gl-legacy.gl-utils .pf-v5-c-login__container {
+    padding-top: 56px;
+  }
+}
